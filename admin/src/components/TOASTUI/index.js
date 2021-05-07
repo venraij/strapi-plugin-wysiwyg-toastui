@@ -2,11 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import '@toast-ui/editor/dist/toastui-editor.css';
+import 'tui-color-picker/dist/tui-color-picker.css';
+import 'tui-chart/dist/tui-chart.css';
 import 'codemirror/lib/codemirror.css';
+import 'highlight.js/styles/github.css';
 import { Editor } from '@toast-ui/react-editor';
 import { Button } from '@buffetjs/core';
 
 import MediaLib from '../MediaLib';
+import colorSyntax from '@toast-ui/editor-plugin-color-syntax';
+import tableMergedCell from '@toast-ui/editor-plugin-table-merged-cell';
+import chart from '@toast-ui/editor-plugin-chart';
+import codeSyntaxHighlight from '@toast-ui/editor-plugin-code-syntax-highlight';
+import hljs from 'highlight.js';
 
 class TOIEditor extends React.Component {
   editorRef = React.createRef();
@@ -68,6 +76,7 @@ class TOIEditor extends React.Component {
         <Editor
           previewStyle={this.previewStyle}
           height={this.height}
+          plugins={[colorSyntax, tableMergedCell, chart, [codeSyntaxHighlight, { hljs }]]}
           initialEditType={this.initialEditType}
           initialValue={this.props.value}
           ref={this.editorRef}

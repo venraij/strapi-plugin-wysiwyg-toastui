@@ -1,25 +1,29 @@
 {
-  "name": "strapi-plugin-wysiwyg-toastui",
-  "version": "0.1.5",
-  "description": "Wysiwyg editor using toastui library.",
+  "name": "strapi-plugin-wysiwyg-toastui-with-plugins",
+  "version": "0.1.9",
+  "description": "Wysiwyg editor using toastui library with added all toast-ui plugins.",
   "strapi": {
-    "name": "strapi-plugin-wysiwyg-toastui",
+    "name": "strapi-plugin-wysiwyg-toastui-with-plugins",
     "icon": "plug",
-    "description": "Wysiwyg editor using toastui library."
+    "description": "Wysiwyg editor using toastui library with added all toast-ui plugins."
   },
   "dependencies": {
+    "@toast-ui/editor-plugin-chart": "^1.0.0",
+    "@toast-ui/editor-plugin-code-syntax-highlight": "^1.0.0",
+    "@toast-ui/editor-plugin-color-syntax": "^1.0.1",
+    "@toast-ui/editor-plugin-table-merged-cell": "^1.3.2",
     "@toast-ui/react-editor": "^2.1.2"
   },
   "author": {
-    "name": "Rakesh Kumar Shardiwal",
-    "email": "rakesh.kumar.shardiwal@forlagshuset.no",
-    "url": "https://www.fagbokforlaget.no/"
+    "name": "Nick van Raaij",
+    "email": "dagelijksnick@gmail.com",
+    "url": "https://niifh.io/"
   },
   "maintainers": [
     {
-      "name": "Rakesh Kumar Shardiwal",
-      "email": "rakesh.kumar.shardiwal@forlagshuset.no",
-      "url": ""
+      "name": "Nick van Raaij",
+      "email": "dagelijksnick@gmail.com",
+      "url": "https://niifh.io/"
     }
   ],
   "engines": {
